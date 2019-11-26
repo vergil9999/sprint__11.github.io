@@ -6,7 +6,7 @@ import PopupImage from './popupimage.js'
 import PopupWithValidation from './popupwithvalidation.js'
 import {handleValidate, validate, activateError, resetError} from './validation.js'
 
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort3' : 'https://praktikum.tk/cohort3'
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort4' : 'https://praktikum.tk/cohort4'
 
 api.getUser().then(data => {
   if (data.name && data.about)  {
