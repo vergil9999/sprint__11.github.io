@@ -26,20 +26,31 @@ module.exports = {
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                use: [
-                  'file-loader',
+                use: [  
+                    {   
+                    loader:'file-loader',
+                    options: {
+                        esModule: false
+                    }
+                  },
+             
                   {
                     loader: 'image-webpack-loader',
                     options: {
                       bypassOnDebug: true, 
-                      disable: true, 
+                      disable: true,
                     },
                   },
+
+
                 ],
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/[name].[ext]',
+                options: {
+                    esModule: false
+                }
             }
         ]
     },
