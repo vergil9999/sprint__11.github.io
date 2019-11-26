@@ -3,8 +3,7 @@ const presets = [
   "@babel/env",
   {
       targets: { // версии браузеров которые нужно поддерживать
-          esmodules: true, 
-          esModule: false,
+        "esmodules": true,
           ie: "11", // Internet Explorer 11
           edge: "17",
           firefox: "60",
